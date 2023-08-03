@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12n</title>
+  </head>
+  <body>
+    <script>
+      let result =[];
+     
+     function removeEgg(foods){
+      foods.filter((value,index)=>{
+        if(!(value === 'egg'))
+        {
+          
+          result.push(value);
+        }
+      });
+      return result;
+     }
+     console.log(removeEgg(['egg','apple','egg','harm','egg']));
+    </script>
+  </body>
+</html>
+
+
+
+

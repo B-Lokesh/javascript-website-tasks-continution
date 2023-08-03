@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12d</title>
+  </head>
+  <body>
+    <button onclick="
+        changed();
+        
+     " class="hello-finish-change finish-loading">hello</button>
+    <script>
+      function changed(){
+      setTimeout(() => {
+        
+        document.querySelector('.hello-finish-change').innerHTML = "Finished"
+      }, 1000);
+   
+      document.querySelector('.hello-finish-change').innerHTML = "Loading";
+     }
+
+   
+    </script>
+  </body>
+</html>
+
+
+
+

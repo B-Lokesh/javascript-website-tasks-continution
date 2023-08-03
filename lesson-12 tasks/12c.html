@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12c</title>
+  </head>
+  <body>
+    <button class="hello-finish-change js-button">hello</button>
+    <script>
+      document.querySelector('.js-button').addEventListener('click',function(){
+        changed();
+      });
+      function changed(){
+      setTimeout(() => {
+        document.querySelector('.hello-finish-change').innerHTML = "Finished"
+      }, 1000);}
+    </script>
+  </body>
+</html>
+
+
+
+

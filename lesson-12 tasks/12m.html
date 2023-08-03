@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12m</title>
+  </head>
+  <body>
+    <script>
+      let result = [];
+      function addNum(add , num){
+      /*  add.forEach((value,index) =>
+        {
+          result.push(value+num);
+        }
+        );
+        return result; */
+        return add.map((value)=>value+num);
+      }
+
+      console.log(addNum([1,2,3],2));
+
+    /* console.log([1,2,3].map((value,num)=>{
+        return value*2;
+      }));*/
+    </script>
+  </body>
+</html>
+
+
+
+

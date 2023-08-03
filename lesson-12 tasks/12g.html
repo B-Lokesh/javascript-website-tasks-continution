@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12g</title>
+  </head>
+  <body>
+    <button onclick="
+      added();
+    ">Add</button>
+
+    <button onclick="
+      removing();
+    ">Remove</button>
+    <script>
+      let messages = 2;
+      setInterval(()=> {
+        if(document.title === '12g'){
+          document.title = `(${messages}) New messages`;
+        }else{
+          document.title ='12g';
+        }
+      },1000);
+
+      function added(){
+        messages+=1;
+      }
+
+      function removing(){
+        messages-=1;
+      }
+    </script>
+  </body>
+</html>
+
+
+
+

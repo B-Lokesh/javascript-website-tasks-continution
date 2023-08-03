@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12f</title>
+  </head>
+  <body>
+    <button class="js-bu js-button1">Add to Cart</button>
+
+    <p class="js-button"></p>
+    <script>
+
+    document.querySelector('.js-button1').addEventListener('click',function(){
+            clicking();
+          });
+      let timeoutId;
+
+      function clicking(){
+        const Element = document.querySelector('.js-button');
+     
+        Element.innerHTML = 'Added';
+     
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+           Element.innerHTML = '';
+        }, 2000);
+     }
+    </script>
+  </body>
+</html>
+
+
+
+

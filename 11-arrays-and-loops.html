@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+    /*  const myArray = [10,20,30];
+      console.log(myArray);
+      console.log(myArray[1]);
+      myArray[0] = 99;
+      console.log(myArray);
+      console.log(typeof [1,2,3]);
+      console.log(Array.isArray([1,2,3]));
+      console.log(myArray.length);
+
+      myArray.push(100);
+      console.log(myArray);
+
+      console.log(myArray.splice(0,1));
+
+      console.log(myArray);  */
+
+      //loops now
+    /*  let i= 1;
+      while(i <= 5) {
+        console.log(i);
+        i+=1;//i++
+      }
+
+      for(let ii=1; ii<=5;ii++)
+      {
+          console.log(ii);
+      }
+      */
+     //looping through an array
+
+     /*
+     let a = [1,2,3,4,5];
+     for(let i=0;i<a.length;i++)
+     {
+      console.log(a[i]+'a');
+     } 
+     */
+
+     //calculating array total
+
+   /*  const nums = [1,1,3];
+     let total=0;
+     for(let i=0;i<nums.length;i++)
+     {
+      total= total+nums[i];
+     }
+     console.log(total);
+
+     //create a copy of the array with each number doubled
+     let originalArray = [1,1,3];
+     let doubledArray = [];
+     for(let i=0;i<originalArray.length;i++)
+     {
+      doubledArray[i] = originalArray[i]*2;
+     }
+     console.log(doubledArray);
+     */
+
+     
+    
+     function arrayDouble(originalArray){
+        let doubledArray = [];
+        for(let i=0;i<originalArray.length;i++)
+        {
+          const value = originalArray[i];
+          if(value === 0){
+          return doubledArray;}
+          doubledArray[i] = originalArray[i]*2;
+        }
+        return doubledArray;
+    }
+    console.log(arrayDouble([1,1,3]));
+    console.log(arrayDouble([2,2,5,0,3]));
+    </script>
+  </body>
+</html>
+
+
+
+

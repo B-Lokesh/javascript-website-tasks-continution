@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12e</title>
+  </head>
+  <body>
+    <button onclick ="clicking();" class="js-bu">Add to Cart</button>
+
+    <p class="js-button"></p>
+    <script>
+      function clicking(){
+     const Element = document.querySelector('.js-button');
+     
+      Element.innerHTML = 'Added';
+     
+      setTimeout(() => {
+          Element.innerHTML = '';
+      }, 2000);
+    }
+    </script>
+  </body>
+</html>
+
+
+
+

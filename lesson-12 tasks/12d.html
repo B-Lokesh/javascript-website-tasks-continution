@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12d</title>
+  </head>
+  <body>
+    <button class="hello-finish-change finish-loading js-button">hello</button>
+    <script>
+       document.querySelector('.js-button').addEventListener('click',function(){
+        changed();
+      });
+    
+      function changed(){
+      setTimeout(function(){
+        document.querySelector('.hello-finish-change').innerHTML = "Finished"
+      }, 1000);
+    loading();
+    }
+
+     function loading(){
+      setTimeout(function(){
+        document.querySelector('.finish-loading').innerHTML = "Loading"
+      }, 0);}
+    </script>
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+     const products = {
+      name : 'socks',
+      price : 1090,
+      size : 'medium'
+     };
+     console.log(products);
+     console.log(products.name);
+     console.log(products.price);
+     console.log(products.hello);//undefined
+     console.log(products);
+     delete products.size;//deletes properrty
+     console.log(typeof products);
+     */
+    //more about objects
+     /*const product2 = {
+        name : 'shirt',
+        'delivery-time' : '1 day',
+        rating : {//nested object
+          stars : 4.5,
+          count : 87
+       },
+       fun : function function1() {
+        console.log('function inside object');
+       }
+      };
+     console.log(product2.name);
+     console.log(product2['name']);
+     console.log(product2['delivery-time']);
+     console.log(product2.rating.count);
+     product2.fun();
+     console.log(typeof product2.fun);
+
+     console.log(JSON.stringify(product2));*/
+
+     //more about objects --->Auto Boxing
+     console.log('hello'.length);
+     console.log('hello'.toUpperCase());
+
+     //demonstration that objects are references
+     const object1 = {
+      message : 'hello'
+     };
+     const object2 = object1; //copy by reference
+     object1.message = 'good job!';
+     console.log(object1);
+     console.log(object2);
+
+     const object3 ={
+      message :'good job!'
+     };
+     
+
+     console.log(object3 === object1);//false
+     //the above code actualy compares references not the code
+     console.log(object2 === object1);//true bcz pointing to samereference in computer memory
+
+     //shortcuts for objects
+
+     const object4 ={
+      message :'good job!',
+      price : 799
+     };
+     //const message = object4.message;
+     //lets see shortcut when variable name and propertyy name is same 
+     const { message,price } = object4;//destructing same work as 71 line
+     console.log(message);
+     console.log(price);
+
+     //shorthand property when property and value same
+     //we create a new object
+     const object5 = {
+      //message : message
+      message//shorthand property same as line before
+     };
+     console.log(object5);//copies message property
+
+     //shorthand method
+     const object6 = {
+      message,
+      /*method : function function1() {
+        console.log('method')
+      }*/
+      method() {// work same as above code called shorthand method
+        console.log('method');
+      }
+     };
+     object6.method();
+
+    </script>
+  </body>
+</html>
+
