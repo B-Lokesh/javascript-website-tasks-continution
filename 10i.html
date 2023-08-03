@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator-functions updated</title>
+    <style>
+      body{
+        background-color:black;
+        color:white;
+        font-family : arial;
+      }
+
+      .button-change{
+        background-color: blueviolet;
+        color : white;
+        font-size : 30px;
+        border-radius : 100%;
+        border:none;
+        padding-top:20px;
+        padding-bottom:20px;
+        padding-left:30px;
+        padding-right:30px;
+        font-weight: bold;
+        margin:10px;
+      }
+
+      .button-change1{
+        background-color:orange;
+        color : white;
+        font-size : 30px;
+        padding-top:20px;
+        padding-bottom:20px;
+        padding-left:30px;
+        padding-right:30px;
+        border-radius : 100%;
+        border : none;
+        font-weight : bold;
+        margin :10px;
+      }
+
+      .button-change3{
+        margin-top :10px;
+        margin-left:100px;
+        border-radius:300px;
+        border:none;
+        font-size:15px;
+        font-weight:bold;
+        padding:20px;
+        color:white;
+        background-color:brown;
+      }
+
+      .calculation-change{
+        color:white;
+        font-size:45px;
+        margin-top:15px;
+        margin-bottom:5px;
+        margin-left:15px;
+      }
+
+      .title-change{
+        font-size:24px;
+        margin-bottom:20px;
+        margin-left:35px;
+        color:lightgray;
+        
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <h3 class="title-change">Lokesh Made Calculator</h3>
+
+    <p class="display-calculation calculation-change"></p>
+
+    <p>
+
+      <button class="button-change" onclick="
+       updateCalculation('1');
+      ">1</button>
+
+      <button class="button-change" onclick="
+       updateCalculation('2');
+      ">2</button>
+
+      <button class="button-change" onclick="
+         updateCalculation('3');
+     ">3</button>
+
+      <button class="button-change1" onclick="
+         updateCalculation(' + ');
+      ">+</button>
+
+      
+    </p>
+
+    <p>
+      <button class="button-change" onclick="
+         updateCalculation('4');
+      ">4</button>
+
+      <button class="button-change" onclick="
+         updateCalculation('5');
+      ">5</button>
+
+      <button class="button-change" onclick="
+         updateCalculation('6');
+     ">6</button>
+
+      <button class="button-change1" onclick="
+         updateCalculation(' - ');
+      "> - </button>
+
+      
+    </p>
+
+    <p>
+      <button class="button-change" onclick="
+         updateCalculation('7');
+      ">7</button>
+
+      <button class="button-change" onclick="
+         updateCalculation('8');
+      ">8</button>
+
+      <button class="button-change" onclick="
+         updateCalculation('9');
+     ">9</button>
+
+      <button class="button-change1" onclick="
+         updateCalculation(' * ');
+      ">*</button>
+
+    </p>
+
+    <p>
+      <button class="button-change" onclick="
+         updateCalculation('0');
+      ">0</button>
+
+      <button class="button-change" onclick="
+         updateCalculation('.');
+      ">.</button>
+
+      <button class="button-change" onclick="
+              
+        calculation = eval(calculation);
+        //console.log(calculation);
+        localStorage.setItem('calculation', JSON.stringify(calculation));
+        displayResOnScreen();//function to display result on screen instead of console
+      ">=</button>
+
+      <button class="button-change1" onclick="
+         updateCalculation(' / ');
+     ">/</button>
+
+      
+    </p>
+
+    <p>
+      <button class="button-change3" onclick="
+        calculation = '';
+       // console.log(calculation);
+        localStorage.setItem('calculation', JSON.stringify(calculation));
+        displayResOnScreen();
+      ">Clear</button>
+    </p>
+    <script>
+      let calculation = JSON.parse(localStorage.getItem('calculation')) ||' ';
+      // Display the calculation when the page first loads.
+      displayResOnScreen();
+      function updateCalculation(value)
+      {
+        calculation += value;
+        
+       // console.log(calculation);
+        localStorage.setItem('calculation', JSON.stringify(calculation));
+        //setitem after calculation  parameter is been any name used to retrive result for getitem 
+        displayResOnScreen();
+      }
+
+      function displayResOnScreen(){
+        document.querySelector('.display-calculation').innerHTML = calculation;
+      }
+    </script>
+  </body>
+</html>
