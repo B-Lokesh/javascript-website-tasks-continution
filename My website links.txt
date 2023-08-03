@@ -2,3 +2,15 @@ rock paper scissors game website link
 
 
 https://b-lokesh.github.io/chinna-website01/
+
+
+calculator project website link 
+
+
+https://b-lokesh.github.io/javascript-website-tasks-continution/calculator.html
+
+
+todolist project website link
+
+
+https://b-lokesh.github.io/javascript-website-tasks-continution/12-to-do-list%20.html
